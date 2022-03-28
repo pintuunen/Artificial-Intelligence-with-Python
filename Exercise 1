@@ -1,0 +1,18 @@
+# My Solution
+
+def tester(givenstring):
+    result = len(givenstring)
+    if result > 10:
+        print(givenstring)
+    else:
+        print("Too short")
+
+def main():
+    while True:
+        x = input("Write something (quit ends): ")
+        if x == "quit":
+            break
+        else:
+            tester(x)
+
+main()
