@@ -1,0 +1,28 @@
+shoppinglist = []
+
+while True:
+    choice = int(input("""Would you like to
+(1)Add or
+(2)Remove items or
+(3)Quit?: """))
+
+    if choice == 1:
+        add = input('What will be added?: ')
+        shoppinglist.append(add)
+
+    elif choice == 2:
+        try:
+            print('There are', len(shoppinglist), 'items in the list.')
+            x = int(input('Which item is deleted?: '))
+            shoppinglist.pop(x)
+        except Exception:
+            print('Incorrect selection.')
+
+    elif choice == 3:
+        print('The following items remain in the list:')
+        for i in shoppinglist:
+            print(i)
+        break
+
+    else:
+        print('Incorrect selection.')
