@@ -1,0 +1,20 @@
+price = [10,14,22,33,44,13,22,55,66,77]
+totalsum = 0
+
+print('Supermarket')
+print('===========')
+
+while True:
+    select = int(input('Please select product (1-10) 0 to Quit: '))
+    if select <11 and select >0:
+        print('Product: ', select, 'Price:',price[select-1])
+        totalsum += price[select-1]
+
+    elif select == 0:
+        print('Total: ', totalsum)
+        payment = int(input('Payment: '))
+        print('Change: ', payment - totalsum)
+        break
+
+    else:
+        print('Incorrect selection.')
